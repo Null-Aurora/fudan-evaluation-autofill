@@ -7,21 +7,27 @@ Tampermonkey 用户脚本，在复旦大学教学质量管理平台 (ce.fudan.ed
 - 一键填写当前页面所有单选题和多选题
 - 单选题：在「非常同意 / 同意 / 一般」之间按可调比例随机分配，避免被系统检测为「全部相同选项」
 - 多选题：自动选择「无」
-- 推荐类题目（如「是否会推荐本课程」）：自动跳过会触发必填理由框的选项，选择「一般」
+- 推荐类题目（如「是否会推荐本课程」）：自动跳过会触发必填理由框的选项（强烈推荐/强烈不推荐），选择「一般」
 - 自动关闭多教师课程弹出的「答卷提示」弹窗
-- 不自动提交、不自动切换教师、不自动翻页，所有关键操作均由用户手动确认
+- 不自动提交、不自动切换教师、不自动翻页，所有关键操作均需手动确认
 
 ## 安装
 
 1. 安装浏览器扩展 [Tampermonkey](https://www.tampermonkey.net/)
+    <br>![Tampermonkey 安装](https://github.com/user-attachments/assets/0a5bf1e6-0262-4426-a2e2-4571aeb32345)
+    <br>![Tampermonkey 启用](https://github.com/user-attachments/assets/9e0caa1a-9836-4864-8166-c546d1adc9d0)
 2. 打开 Tampermonkey → **创建新脚本**
+    <br>![创建新脚本](https://github.com/user-attachments/assets/dd1398a0-0043-49d1-8abb-7e1de82e1f1a)
 3. 将 `fudan-evaluation.user.js` 的全部内容粘贴进去
-4. `Ctrl+S` 保存，确保脚本开关为**启用**状态
+    <br>![粘贴脚本内容](https://github.com/user-attachments/assets/f136bafd-76a5-476d-acca-51b3765071b7)
+4. `Ctrl+S` 保存，确保 Tampermonkey 和该脚本均为**启用**状态
+    <br>![保存并启用](https://github.com/user-attachments/assets/4fff11e0-366c-40f2-a4d1-adc9934389a3)
 5. 刷新评教页面，右下角应出现「评教助手」控制面板
+    <br>![控制面板](https://github.com/user-attachments/assets/f385cedb-ab61-4b46-b03e-cb38d914a550)
 
 ## 使用
 
-1. 打开评教页面（`https://ce.fudan.edu.cn` → 我的任务 → 评教）
+1. 打开评教页面
 2. 页面右下角出现控制面板
 3. 调整比例（可选）：
    - **非常同意**：选「非常同意」的概率
@@ -31,7 +37,7 @@ Tampermonkey 用户脚本，在复旦大学教学质量管理平台 (ce.fudan.ed
 5. 检查填写结果，手动点击提交
 6. 手动切换到下一位教师或下一门课程，重复上述步骤
 
-> 注意：如果三项比例之和超过 100%，「同意」会显示为负数（红色），按钮将被禁用。
+> 注意：三项比例之和请不要超过 100%
 
 ## 隐私与安全
 
@@ -70,8 +76,7 @@ Tampermonkey 用户脚本，在复旦大学教学质量管理平台 (ce.fudan.ed
 ## 文件
 
 - `fudan-evaluation.user.js` — Tampermonkey 用户脚本（安装此文件）
-- `page.html` — 评教页面 DOM 参考（仅开发用）
-- `docs/superpowers/specs/` — 设计文档
+- `README.md` — 本说明文档
 
 ## 开发
 
